@@ -1,0 +1,379 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: white;
+    --secondary-color: #333;
+    --background-color: #3CAEA3;
+    --text-color: #000000;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.8);
+    color: var(--primary-color);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4da6e0;
+}
+
+/* Section Styling */
+section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    scroll-snap-align: start; /* Aligns section at the start of the viewport */
+}
+
+/* Section Backgrounds */
+#home {
+    z-index: -1;
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') no-repeat center center / cover;
+    position: relative;
+}
+
+.typing-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.typing-text {
+    color: #b7d6f3;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#about {
+    background: #05304d;
+    flex-direction: column;
+}
+
+#design {
+    background: #05304d;
+    flex-direction: column;
+}
+
+#data {
+    background: #05304d;
+    flex-direction: column;
+}
+
+/* Scrollable Container */
+body {
+    scroll-snap-type: y mandatory; /* Enables scroll snapping */
+    overflow-y: scroll; /* Enables vertical scrolling */
+}
+
+
+
+
+.typing-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    z-index: 1; /* Ensure the text is visible */
+}
+
+#heading1 {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.what {
+    align-self: normal;
+    margin-top: 0%;
+    color: white;
+    line-height: 1.5;
+    font-size: 1rem;
+    width: 100%;
+    text-wrap: wrap;
+    height: max-content;
+    margin-bottom: 35%;
+}
+
+
+
+/* Block of Important */
+#heading2 {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.important {
+    align-self: normal;
+    margin-top: 0%;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    text-wrap: wrap;
+    height: max-content;
+}
+
+/* Block of Data */
+
+#heading3 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+
+
+
+#heading4{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.design {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+
+#flowchart {
+    width: 100%;
+    height: 60%;
+}
+
+
+
+.data {
+    align-self: normal;
+    color: white;
+    line-height: 1.5;
+    font-size: 1rem;
+    width: 100%;
+    text-wrap: wrap;
+    height: max-content;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#graph {
+    width: 100%;
+    height: 250px;
+    justify-self: center;
+    margin-bottom: auto;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%; /* Fully revealed text */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffffff;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+
+    #about{
+        flex-direction: row;
+    }
+
+    #data{
+        flex-direction: row;
+    }
+
+    #design {
+        flex-direction: row;
+    }
+
+
+    #heading1 {
+        font-size: 1.6rem;
+    }
+
+
+    .what {
+        align-self: center;
+        justify-self: left;
+        color: white;
+        font-size: 1.5rem;
+        width: 45%;
+        text-wrap: wrap;
+        margin-bottom: 0%;
+    }
+
+    #heading2 {
+        font-size: 1.7rem;
+    }
+
+    .important {
+        align-self: center;
+        margin-left: auto;
+        color: white;
+        font-size: 1.6rem;
+        width: 45%;
+        text-wrap: wrap;
+    }
+
+    .dcontainer {
+        display: flex;
+        background-color: #606270;
+        height: 70%;
+        width: 50%;
+        justify-content: center;
+        z-index: 0;
+        border-radius: 20px;
+    }
+
+
+
+    .data{
+        padding: 5px;
+        width: 80%;
+        line-height: 1.5;
+        justify-self: center;
+        text-wrap: wrap;
+        font-size: 1.8rem;
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+
+
+
+    #heading3{
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+    }
+    
+    #graph{
+        width: 45%;
+        height: 55%;
+        margin-left: auto;
+        align-self: center;
+        border-radius: 3px;
+        margin-bottom: 0%;
+
+    }
+
+
+    #heading4 {
+        font-size: 2.1rem;
+        text-decoration: underline;
+    }
+
+
+    .design{
+        font-size: 2rem;
+        text-wrap: wrap;
+        width: 60%;
+        align-self: center;
+    }
+
+
+
+    #flowchart {
+        width: 50%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .typing-container {
+        width: 0; /* Start hidden */
+        overflow: hidden;
+        white-space: nowrap; /* Prevent wrapping */
+        animation: typing 8s steps(700, end), blink-caret 0.75s step-end infinite;
+        font-size: 1.5rem;
+        width: 80ch;
+    }
+
+
+    .typing-text {
+        font-size: 3rem;
+
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    section {
+        font-size: 2.5rem;
+    }
+}
