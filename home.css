@@ -254,11 +254,12 @@ body {
     .dcontainer {
         display: flex;
         background-color: #606270;
-        height: 70%;
+        height: fit-content;
         width: 50%;
         justify-content: center;
         z-index: 0;
         border-radius: 20px;
+        padding-bottom: 25px;
     }
 
     .data {
